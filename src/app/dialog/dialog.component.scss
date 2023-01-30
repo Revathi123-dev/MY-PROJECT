@@ -1,0 +1,76 @@
+// .mat-form-field{
+//     // width:100%;
+//     // margin-right: 20px;
+// }
+
+.mat-dialog-container{
+  width:5px;
+}
+
+.example-radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+    align-items: flex-start;
+
+  }
+  
+  .example-radio-button {
+    margin: 5px;
+//     width: 18px;
+// height: 18px;
+  }
+.right {
+    float: right;
+  }
+
+  .revathi{
+    background-color:	 #ff3333;
+    border-radius: 10px;
+    transition: 0.1s all ease-in-out;
+        &:hover{
+          //  color:whitesmoke;
+          //  background-color:#2c3344;
+           transform: scale(1.1);
+       }
+   }
+   
+  .ss1{
+    // background-color:	 #ff3333;
+    border-radius: 10px;
+    transition: 0.1s all ease-in-out;
+        &:hover{
+          //  color:whitesmoke;
+          //  background-color:#2c3344;
+           transform: scale(1.1);
+       }
+   }
+
+  //  option:invalid{
+  //   color:gray;
+  //  }
+//   div { 
+//   max-width: 18em;
+// } 
+//     h1 { 
+//   color:green; 
+//   } 
+//     select { 
+//   margin-left:130px; 
+//   } 
+
+// .revathicse{
+//   color:gray;
+// }
+
+// .option disabled hidden{
+// color:gray;
+// }
+
+
+select:invalid { color: gray; }
+
+.wrapper {
+  outline: 1px solid gray;
+  
+}

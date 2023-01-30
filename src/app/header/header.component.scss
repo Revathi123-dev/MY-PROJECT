@@ -1,0 +1,49 @@
+.mat-toolbar{
+    position:sticky;
+    top: 0;
+    z-index: 100;
+    background: #f7f7f7;
+
+}
+ul{
+    li{
+        list-style: none;
+    }
+}
+button{
+    border:0;
+    outline:none;
+    background:transparent;
+    // transition: 0.5s all ease-in-out
+}
+
+
+.user{
+    font-size:14px;
+    transition: 0.5s all ease-in-out
+}
+.user:hover{
+    
+    transform: scale(1.5);
+}
+
+.user-image{
+    border-radius: 50%;
+    width:55px;
+   
+}
+
+.user-image-icon{
+    height:18px;
+    font-size:16px;
+}
+
+::ng-deep{
+    .mat-menu-content{
+        width:160px;
+
+    }
+}
+
+
+

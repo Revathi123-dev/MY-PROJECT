@@ -1,0 +1,134 @@
+<div class="container-fluid page">
+    <div class="page__box p:3 mt-2" style="position: fixed;min-height: 50px;padding-top: 30px;width: 1000px;"><b style="font-size:19px;text-align: center;padding-left: 430px;" > Sells Dashboard</b></div>
+    <div class="page__content shadow p-3 position-relative" style="padding-top: 30px;">
+        <div class="page__content-data position-absolute text-center" style="margin-top:20px;"><b style="color:#191970">Customer and Order Details:</b>
+            <table>
+                <tr>
+                <th style="font-size:15px;">Order Id</th>
+                <th style="font-size:15px;">Order Date</th>
+                <th style="font-size:15px;">Customer Name</th>
+                <th style="font-size:15px;">Customer Mobile No</th>
+                </tr>
+                <tr>
+                <td style="font-size:15px">104</td>
+                <td style="font-size:15px">5/12/22</td>
+                <td style="font-size:15px">Revathi</td>
+                <td style="font-size:15px">7075371549</td>
+                </tr>
+            </table>
+          <p style="font-size: 15px;color:   	#191970"><b >Add Items</b><p>
+            <div class="card">
+                <form [formGroup]="userForm">
+                    <div class="mt-5 box">
+                        <div class="form-row">
+                            <div class="col-md-12">
+                                <div class="form-group mt-4">
+                                    <label style="font-size:15px" >Product Id<sup class="sup">*</sup></label>
+                                </div>
+                                <div class="form-row" style="margin-top:-10px">
+                                    <div class="col">
+                                        <input type="number" formControlName="name" class="form-control" placeholder="Please enter Id" style="width:300px;height:20px;border-radius: 5px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group  mt-4">
+                                    <label style="font-size:15px;" >Product Name<sup class="sup">*</sup></label>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <input type="text" formControlName="address" class="form-control" placeholder="Please enter name" style="width:300px;height:20px;border-radius: 5px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12"  >
+                                <div class="form-group  mt-4">
+                                    <label style="font-size:15px" >Price Per Unit<sup class="sup">*</sup></label>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col">
+                                        <input type="number" formControlName="contactNo" class="form-control" placeholder="Please enter cost" style="width:300px;height:20px;border-radius: 5px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row mt-4">
+                                <div class="col-md-6">
+                                    <button type="button" class="but_on but_2" (click)="addItem()" style="color:black;background-color:skyblue;border-radius:10px;width:50px">Add</button>&nbsp;&nbsp;
+                                    <button type="button" class="but_on but_2" (click)="reset()" style="color:black;background-color:skyblue;border-radius:10px;width:50px">Reset</button>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <br>
+                <p style="font-size: 15px;;color:   	#191970"><b>Order Item Details</b><p>     
+                <div class="col-md-8 mt-4 mb-4">
+                    <div>
+
+                    <table>
+                        <thead>
+                            <tr style="background-color:powderblue">
+                                <th  style="font-size:15px;">Product Id</th>
+                                <th  style="font-size:15px;">Product Name</th>
+                                <th  style="font-size:15px;">Price Per Unit</th>
+                                <th  style="font-size:15px;">Action</th>
+                            </tr>
+                        </thead >
+                        <tbody>
+                            <tr *ngFor = "let item of listData" id="content-section">
+                               
+                                
+                                <td style="font-size:15px;text-align:left">{{item.name}}</td>
+                                <td style="font-size:15px;text-align:left">{{item.address}}</td>
+                                <td style="font-size:15px;text-align:left" >{{item.contactNo}}</td>
+                               
+                                
+                            
+                                
+                                    <td style="font-size:15px;text-align:left"><button type="button" class="btn btn-primary" (click)="removeItem(item)"><mat-icon style="color: #8B0000">delete</mat-icon></button></td>
+                                    <!-- <div (click)="triggerPrint();">
+                                        <span>Print</span>
+                                      </div>
+                                    <button #print printTitle="report" printSectionId="content-section" ngxPrint hidden="true" [useExistingCss]="true"
+                                     ></button>
+                                     -->
+                                
+                                
+                                
+                                <!-- <td><button type="button" class="btn btn-primary" (click)="editItem(item)"><mat-icon style="color: #8B0000">edit</mat-icon></button></td> -->
+
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    </div>
+
+                    
+                        
+                    
+                    <div class="next">
+                        <!-- <button class="btn" (click)="goToVotes()">Check votes</button> -->
+                        <br>
+                        <button type="button" class="revathi" (click)="opendialog()" style="background-color:#00FF00;color:black;padding-left: 6px;
+  padding-right: 6px;
+  padding-left: 6px;
+  margin-bottom: 6px;
+  margin-top: 6px;"><i class="fa fa-plus"></i>Save</button>&nbsp;
+ 
+  <button type="button" class="revathi" (click)="buttonclick()"  style="background-color:skyblue;color:black;padding-left: 6px;
+  padding-right: 6px;
+  padding-left: 6px;
+  margin-bottom: 6px;
+  margin-top: 6px;"><i class="fa fa-plus"></i>Next</button>&nbsp;
+ <!-- <button printSectionId="demo" ngxPrint>Directive - 1# Print table</button> --> 
+ <!-- <button type="button" printSectionId1="demo2"ngxPrint>Directive - 1# Print table</button>  -->
+
+                </div> 
+
+                </div>
+            </div>
+                       
+
+        </div>
+    </div>
+   

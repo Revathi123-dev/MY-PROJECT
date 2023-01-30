@@ -1,0 +1,212 @@
+{
+  "productList": [
+    {
+      "productName": 89,
+      "category": "Electronics",
+      "freshness": "BrandNew",
+      "price": 90,
+      "comment": "grapes",
+      "date": "2023-01-18T18:30:00.000Z",
+      "stock": "99",
+      "code": "90",
+      "id": 4
+    },
+    {
+      "productName": "reava",
+      "category": "Fruits",
+      "freshness": "BrandNew",
+      "price": 1,
+      "comment": "90",
+      "date": "2023-01-10T18:30:00.000Z",
+      "stock": "90",
+      "code": "90",
+      "id": 5
+    },
+    {
+      "productName": "rr",
+      "category": "Fruits",
+      "freshness": "BrandNew",
+      "price": 90,
+      "comment": "",
+      "date": "",
+      "stock": "",
+      "code": "",
+      "id": 6
+    },
+    {
+      "productName": "revathi",
+      "category": "Electronics",
+      "freshness": "BrandNew",
+      "price": 90,
+      "comment": "fresh",
+      "date": "2023-01-05T18:30:00.000Z",
+      "stock": "89",
+      "code": "90",
+      "id": 7
+    },
+    {
+      "productName": "re",
+      "category": "Electronics",
+      "freshness": "BrandNew",
+      "price": 90,
+      "comment": "grapes",
+      "date": "2023-01-18T18:30:00.000Z",
+      "stock": "90",
+      "code": "90",
+      "id": 8
+    },
+    {
+      "productName": "reva",
+      "category": "vegetables",
+      "freshness": "BrandNew",
+      "price": 90,
+      "comment": "revathi",
+      "date": "2023-01-05T18:30:00.000Z",
+      "stock": "90",
+      "code": 90,
+      "id": 9
+    },
+    {
+      "productName": "ghj",
+      "category": "Electronics",
+      "freshness": "BrandNew",
+      "price": 89,
+      "comment": "grapes",
+      "date": "2023-01-01T18:30:00.000Z",
+      "stock": "78",
+      "code": 90,
+      "id": 10
+    },
+    {
+      "productName": "re",
+      "category": "1",
+      "freshness": "BrandNew",
+      "price": 89,
+      "comment": "grapes",
+      "date": "2023-01-24T18:30:00.000Z",
+      "stock": "89",
+      "code": 90,
+      "id": 11
+    },
+    {
+      "productName": "revathi",
+      "category": "0",
+      "freshness": "BrandNew",
+      "price": 89,
+      "comment": "grapes",
+      "date": "2023-01-17T18:30:00.000Z",
+      "stock": "90",
+      "code": 90,
+      "id": 12
+    },
+    {
+      "productName": "re",
+      "category": "0",
+      "freshness": "BrandNew",
+      "price": 89,
+      "comment": "grapes",
+      "date": "2023-01-30",
+      "stock": "90",
+      "code": 90,
+      "id": 13
+    },
+    {
+      "productName": "reva",
+      "category": "1",
+      "freshness": "BrandNew",
+      "price": 89,
+      "comment": "grapes",
+      "date": "2022-12-27",
+      "stock": 90,
+      "code": 90,
+      "id": 14
+    },
+    {
+      "productName": "revathi",
+      "category": "1",
+      "freshness": "BrandNew",
+      "price": 89,
+      "comment": "grapes",
+      "date": "2022-12-26",
+      "stock": 89,
+      "code": 90,
+      "id": 15
+    },
+    {
+      "productName": "revathi",
+      "category": "1",
+      "freshness": "BrandNew",
+      "price": 89,
+      "comment": "revathi",
+      "date": "2023-01-09",
+      "stock": 89,
+      "code": 89,
+      "id": 16
+    },
+    {
+      "productName": "Revathi",
+      "category": "1",
+      "freshness": "BrandNew",
+      "price": 90,
+      "comment": "grapes",
+      "date": "2023-01-02",
+      "stock": 89,
+      "code": 90,
+      "id": 17
+    },
+    {
+      "productName": "re",
+      "category": "0",
+      "freshness": "BrandNew",
+      "price": 90,
+      "comment": "grapes",
+      "date": "2023-01-03",
+      "stock": 90,
+      "code": 90,
+      "id": 18
+    },
+    {
+      "productName": "bfhdg",
+      "category": "0",
+      "freshness": "BrandNew",
+      "price": 99,
+      "comment": "grapes",
+      "date": "2023-01-05",
+      "stock": 89,
+      "code": 89,
+      "id": 19
+    },
+    {
+      "productName": "revathi",
+      "category": "0",
+      "freshness": "BrandNew",
+      "price": 90,
+      "comment": "grapes",
+      "date": "2022-12-30",
+      "stock": 89,
+      "code": 89,
+      "id": 20
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "page": 0,
+    "per_page": 0,
+    "total": 0,
+    "total_pages": 0,
+    "data": [
+      {
+        "id": 0,
+        "email": "string",
+        "first_name": "string",
+        "last_name": "string",
+        "avatar": "string"
+      }
+    ]  }
+}

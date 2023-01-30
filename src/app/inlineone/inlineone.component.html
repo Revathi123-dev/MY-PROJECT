@@ -1,0 +1,103 @@
+  <div class="container-fluid page">
+            <br>
+            <div class="page__box p:3 mt-2" style="position: fixed;
+            min-height: 20px;
+            padding-top: 10px;
+            width: 1000px;
+            margin-top: -19px;"><B style="width:40%;height:30%;size:20%;font-size:19px;padding-left: 390px">Customer Details</B></div>
+            <br>
+            <div class="page__content shadow p-3 position-relative" style="padding-top:60px;margin-left: -15px;">
+                <div class="page__content-data position-absolute text-center">
+               
+        <table style="width:100%">
+            <tr>
+              <th style="text-align:left; background-color: green;" >Sl.no</th>
+              <th style="text-align:left; background-color: green">Name</th>
+              <th style="text-align:left; background-color: green">Username</th>
+              <th style="text-align:left; background-color: green">Email</th>
+              <th style="text-align:left; background-color: green">Phone</th>
+              <th style="text-align:left; background-color: green">Websites</th>
+              <th style="text-align:left; background-color: green">Action</th>
+            </tr>
+            <tr *ngFor="let user of usersArray;let i=index">
+              <td>{{user.id}}</td>
+              <td  >
+                <div *ngIf="user.isEdit" >
+                    <input type="text" [(ngModel)]="user.name" class="form-control" style="border:none;border-bottom:1px solid gray;padding:8px"/>
+                </div>
+                <div *ngIf = "!user.isEdit" style="text-align:left;font-size: 15px;">
+                    {{user.name}}
+
+                </div>
+              </td>
+              <td>
+                <div *ngIf="user.isEdit">
+                    <input type="text" [(ngModel)]="user.username" class="form-control" style="border:none;border-bottom:1px solid gray;padding:8px"/>
+                </div>
+                <div *ngIf = "!user.isEdit" style="text-align:left;font-size: 15px">
+                    {{user.username}}
+
+                </div>
+              </td>
+              <td>
+                <div *ngIf="user.isEdit">
+                    <input type="text" [(ngModel)]="user.email" class="form-control" style="border:none;border-bottom:1px solid gray;padding:8px"/>
+                </div>
+                <div *ngIf = "!user.isEdit" style="text-align:left;font-size: 15px">
+                    {{user.email}}
+
+                </div>
+              </td>
+              <td >
+                <div *ngIf="user.isEdit">
+                    <input type="text" [(ngModel)]="user.phone" class="form-control" style="border:none;border-bottom:1px solid gray;padding:8px"/>
+                </div>
+                <div *ngIf = "!user.isEdit" style="text-align:left;font-size: 15px">
+                    {{user.phone}}
+
+                </div>
+              </td>
+              <td>
+                <div *ngIf="user.isEdit">
+                    <input type="text" [(ngModel)]="user.websites" class="form-control" style="border:none;border-bottom:1px solid gray;padding:8px"/>
+                </div>
+                <div *ngIf = "!user.isEdit" style="text-align:left;font-size: 15px">
+                    {{user.websites}}
+
+                </div>
+              </td>
+              
+             
+            
+        
+              <td>
+                <div *ngIf="user.isEdit">
+                    <button class="btn btn-sm btn-succcess" (click)="onEdit(user)" class="revathi"><mat-icon style="color:blue">update</mat-icon></button>
+                    <button class="btn btn-sm btn-succcess" (click)="ondelete(user)" class="sss"><mat-icon  style="color:red">delete</mat-icon></button>
+                </div>
+                <div *ngIf="!user.isEdit">
+                    <button class="btn btn-sm btn-succcess" (click)="onEdit(user)" class="ss1"><mat-icon style="color:blue">edit</mat-icon></button>
+                 </div>
+            </td> 
+            </tr>
+        
+          </table>  
+    </div>
+</div>
+   <div class="next">
+    <div class="next">
+      <button type="button" class="revathi" (click)="opendialog()" style="background-color:#00FF00;color:black;padding-left: 6px;
+      padding-right: 6px;
+      padding-left: 6px;
+      margin-bottom: 6px;
+      margin-top: 6px;"><i class="fa fa-plus"></i>Save</button>&nbsp;
+      <button type="button" class="revathi" (click)="buttonclick()"  style="background-color:skyblue;color:black;padding-left: 6px;
+      padding-right: 6px;
+      padding-left: 6px;
+      margin-bottom: 6px;
+      margin-top: 6px;"><i class="fa fa-plus"></i>Next</button>   
+  </div> 
+  
+                </div> 
+</div>
+        

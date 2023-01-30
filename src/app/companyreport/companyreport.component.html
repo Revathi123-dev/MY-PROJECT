@@ -1,0 +1,116 @@
+<mat-toolbar style="background-color: #FFFF64;
+color: #00F;">
+ 
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon style="color: #00F">add_shopping_cart</mat-icon>
+    </button>
+    <span  style="color: #00F"  >Add product</span>
+    <span class="example-spacer"></span>
+    <button mat-raised-button (click)="openDialog()" class="style">Add product</button>
+
+ </mat-toolbar>
+ <div class="container">
+  <div style="margin-top:10px;">
+    <mat-form-field appearence="standard">
+      <mat-label>Filter</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+    </mat-form-field>
+    
+    <div class="mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource" matSort>
+    
+        <!-- productname the sequence that we mentioning here it should be same as the .ts display columns string exact sequence or it definetly doesn't shows the data.-->
+        <ng-container matColumnDef="productName">  
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Product Title</th>
+          <td mat-cell *matCellDef="let row"> {{row.productName}} </td>
+        </ng-container>
+        <ng-container matColumnDef="code">  
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Product code</th>
+          <td mat-cell *matCellDef="let row"> {{row.code}} </td>
+        </ng-container>
+    
+        <!-- Progress Column -->
+        <ng-container matColumnDef="category">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Product Category</th>
+          <td mat-cell *matCellDef="let row"> {{row.category}}</td>
+        </ng-container>
+    
+        <!-- Name Column -->
+        <ng-container matColumnDef="date">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Manufactured Date </th>
+          <td mat-cell *matCellDef="let row"> {{row.date | date}} </td>
+        </ng-container>
+        
+        <!-- Fruit Column -->
+        <ng-container matColumnDef="freshness">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Freshness </th>
+          <td mat-cell *matCellDef="let row"> {{row.freshness}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="stock">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Total stock </th>
+          <td mat-cell *matCellDef="let row"> {{row.stock}} </td>
+        </ng-container>
+        <ng-container matColumnDef="price">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Cost Per Unit</th>
+          <td mat-cell *matCellDef="let row"> {{row.price | currency}} </td>
+        </ng-container>
+        <ng-container matColumnDef="comment">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Description</th>
+          <td mat-cell *matCellDef="let row"> {{row.comment}} </td>
+        </ng-container>
+        <ng-container matColumnDef="Action">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
+          <td mat-cell *matCellDef="let row" > 
+            <button mat-icon-button (click)="editProduct(row)"color="primary" class="rrr">
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button (click)="deleteProduct(row.id)" mat-icon-button color="warn" class="sss">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+    
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    
+        <!-- Row shown when there is no matching data. -->
+        <tr class="mat-row" *matNoDataRow>
+          <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+        </tr>
+      </table>
+    
+      <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+    </div>
+    
+    
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="next">
+    <button type="button" class="revathi" (click)="opendialog()" style="background-color:#00FF00;color:black;padding-left: 6px;
+    padding-right: 6px;
+    padding-left: 6px;
+    margin-bottom: 6px;
+    margin-top: 6px;"><i class="fa fa-plus"></i>Save</button>&nbsp;
+    <button type="button" class="revathi" (click)="buttonclick()"  style="background-color:skyblue;color:black;padding-left: 6px;
+    padding-right: 6px;
+    padding-left: 6px;
+    margin-bottom: 6px;
+    margin-top: 6px;"><i class="fa fa-plus"></i>Next</button>   
+</div> 
+ </div>
+ <!-- <button mat-raised-button color="warn" (click)="openDialog()">Add product</button> -->
+
+

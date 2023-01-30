@@ -1,0 +1,108 @@
+<div class="container-fluid page" >
+    <div class="page__box p-3 mt-2"style="position: fixed;
+    width: 1020px;
+    padding-top: ;
+    min-height: 40px;
+    background-color:#1e293b;
+    margin-top: 20px;
+    padding-top: 20px;
+    background-color: #FFFF64;
+        color: #00F;"><b style="width:40%;height:30%;size:20%;font-size:20px;padding-left: 390px;">Add new Category</b></div>
+        <div class="page__content shadow p-3 position-relative">
+        <div class="page__content-data position-absolute text-center">
+            <br>
+            <br>
+            <div>
+                <div class="container">
+                <div class="row">
+                    <div>
+                        <form [formGroup]="signupform" style="padding-left:30px;margin-top: 20px;font-size: 15px;">
+                            
+                            <div class="form-group" style="padding-left:30px">
+                                <label style="font-size :16px;font-size:15px;" class="text-right" > Category Name</label><sup style="color:red">*</sup>&nbsp;&nbsp;&nbsp;
+                                <br><br>
+                                
+        
+                                <input type="text" formControlName="fname" style="width:50%;height:40px;margin-top: -10px;">
+                                <!-- <span *ngIf="signupForm.controls['fname'].hasError('required')">first name</span> -->
+                            </div>
+                            <br>
+                            <div class="form-group" style="padding-left:30px">
+                                <label style="font-size :16px;font-size:15px" class="text-right">Description</label><sup style="color:red">*</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <br>
+                                <input type="text" formControlName="emailid" style="width:50%;height:60px;margin-top: 10px;">
+                                 <!-- <span *ngIf="signupForm.controls['fname'].hasError('required')">first name</span> -->
+                            </div>
+                            <!-- <div class="form-group">
+                                <input type="text" formControlName="userpassword">
+                                <!-- <span *ngIf="signupForm.controls['fname'].hasError('required')">first name</span> -->
+                            
+                             <br>
+                             
+                            <div style="padding-left:30px">
+                                <button type="button" (click)="PostData()" [disabled]="!signupform.valid" style="background-color:skyblue;color:black;border-radius:10px;width:50px">submit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <button type="button" (click)="resetForm()" style="background-color: 	#FFBF00;color:black;border-radius:10px;width:50px">Reset</button>
+                            </div>
+                            
+                        </form>
+                    </div>
+            
+                </div>
+                </div>
+            </div>
+            <!-- <div class="form-group" style="padding-left:30px" >
+                <h4 style="font-size :18px;padding-left:30px"  >check category details here!</h4>
+                <div style="font-size :16px;padding-left:30px" >Category Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:{{firstname}}</div>
+                <hr >
+                <div style="font-size :16px;padding-left:30px" >Description of company:{{email}}</div> 
+            </div> -->
+            <p style="font-size:15px;padding-left:30px;padding-left:63px">Check category Details here!</p>
+
+            <table  *ngIf="email && firstname" style="border:1px solid gray;  border-collapse: collapse;margin-left: 64px;
+            "> 
+                <!-- <p style="font-size:15px;padding-left:30px">Check category Details here!</p> -->
+                <tr>
+                <td style="font-size :15px;border:1px solid gray;  border-collapse: collapse;text-align: left;width:190px
+                ">Category Name</td>
+                <td style="font-size :15px;text-align:left;border:1px solid gray;  border-collapse: collapse;width:190px
+                ">Category Description</td>
+                </tr>
+                <tr style="border:none">
+                    <td style="font-size :15px;padding-left:30px;border:1px solid gray;  border-collapse: collapse;text-align: left;
+                    ">{{email}}</td>
+                    <td style="font-size :15px;padding-left:30px;border:1px solid gray;  border-collapse: collapse;text-align: left;
+                    ">{{firstname}}</td>
+                </tr>
+            </table>
+           
+        </div>
+
+    </div>
+    <div class="next">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+       
+        <div class="next">
+            <button type="button" class="button" (click)="opendialog()" style="background-color:#00FF00;color:black;padding-left: 6px;
+            padding-right: 6px;
+            padding-left: 6px;
+            margin-bottom: 6px;
+            margin-top: 6px;"><i class="fa fa-plus"></i>Save</button>&nbsp;
+            <button type="button" class="button" (click)="buttonclick()"  style="background-color:skyblue;color:black;padding-left: 6px;
+            padding-right: 6px;
+            padding-left: 6px;
+            margin-bottom: 6px;
+            margin-top: 6px;"><i class="button"></i>Next</button>   
+        </div> 
+         
+      </div> 
+</div>
+
+ 
+ 
+ 
+ 
+ 

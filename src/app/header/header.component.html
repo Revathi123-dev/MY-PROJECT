@@ -1,0 +1,26 @@
+<mat-toolbar >
+   <mat-toolbar-row class="justify-content-between">
+     <button mat-icon-button (click)="toggleSidebar()"><mat-icon>menu</mat-icon></button>
+<div class="row mr-2 ml-auto">
+    <ul>
+    <br>
+        <li style="float:right;padding-left: 770px;padding-bottom:40px"><button mat-button [matMenuTriggerFor]="menu" class="user mt-2 d-flex align-items-center" >
+              <!-- <img src="../../assets/hhh.jpeg" alt="" class="user-image mr-1 p-2"/>Revathi -->
+              <mat-icon>account_circle</mat-icon>Hi..Revathi!
+                <mat-icon class="user-image-icon ml-1">keyboard_arrow_down</mat-icon>
+         </button>
+            <mat-menu #menu="matMenu">
+                <!-- <button mat-menu-item> -->
+                    <button mat-menu-item type="button" class="but_on but_2" (click)="buttonclick()"><i class="fa fa-plus"></i>logout
+                   <mat-icon>exit_to_app</mat-icon>
+                </button>
+            </mat-menu>
+        </li>
+    </ul>
+</div>
+
+<!-- <div class="ss" style="position:fixed;background-color: blanchedalmond; width:2000px">
+    <h1 >dashboard</h1>
+</div> -->
+   </mat-toolbar-row>
+</mat-toolbar>

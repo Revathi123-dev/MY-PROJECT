@@ -1,0 +1,21 @@
+@media print {
+    .noPrint{
+      display:none;
+    }
+  }
+  h1{
+    color:#f6f6;
+  }
+//   @media print {
+//     body * {
+//       visibility: hidden;
+//     }
+//     #section-to-print, #section-to-print * {
+//       visibility: visible;
+//     }
+//     #section-to-print {
+//       position: absolute;
+//       left: 0;
+//       top: 0;
+//     }
+//   }

@@ -1,0 +1,49 @@
+<div class="container-fluid page">
+    <div class="page__box p-3 mt-2"style="position:fixed;width:1000px;padding-top:40px;min-height:50px"><b style="font-size:19px;text-align: center;padding-left: 430px;">Start Sell</b></div>
+    <div class="page__content shadow p-3 position-relative" style="padding-left:30px;padding-top:20px">
+        <div class="page__content-data position-absolute text-center">
+
+            <div class="container" style="min-height:20px;padding-top:30px;margin-top: 80px;">
+                <div class="title" style="font-size: 16px;" >Enter Customer Name and Mobile to start sells</div>
+                <br>
+                <form action="#">
+                    <div class="user-details">
+                        <div class="input-box">
+                            <span class="details" style="font-size:15px" >Name<sup style="color:red">*</sup></span>
+                            <!-- <div *ngIf="m.mob.errors?.pattern" style="font-size:10px;color:red" >Please enter valid number</div> -->
+                            <input type="text" placeholder="Enter Name" required style="width: 300px;
+                            height: 20px;
+                            border-radius: 5px;
+                            font-size: 15px;" >
+                        </div>
+                        <div class="input-box">
+                            <form [formGroup]="myForm" (ngSubmit)="onSubmit()" novalidate>
+                                <div class="form-group">
+                                  <!-- <label>Mobile number: </label> -->
+                                  <span class="details" style="font-size:15px"  >Mobile number<sup style="color:red">*</sup></span>
+                                  
+                                  <input type="text" formControlName="mob" class="form-control mb-2" placeholder="Enter Mobile No" alue="+91" size="2"style=" width: 300px;
+                                  height: 20px;
+                                  border-radius: 5px;
+                                  font-size: 15px;">
+                                  <div *ngIf="m.mob.touched && m.mob.invalid" class="alert alert-danger">
+                                    <div *ngIf="m.mob.errors?.required" style="font-size:1.1rem" >Enter Mobile Number</div>
+                                    <div *ngIf="m.mob.errors?.pattern" style="font-size:13px;color:red" >Please enter valid number</div>
+                                  </div>
+                                </div>
+                                <div class="d-grid mt-3">
+                                  <button class="revathi" [disabled]="!myForm.valid" type="submit" style="size:0px"></button>
+                                </div>
+                              </form>
+                              </div>
+                          <br>
+                       <button type="button" class="rr" (click)="btnClick();"  style="border-radius:10px;background-color: skyblue;font: width 10px;padding:3px;  padding-left: 4px;
+                       padding-right: 4px;
+                       padding-top: 2px;
+                       padding-bottom: 2px;
+                     "><i class="fa fa-plus"></i> Start sell</button>     
+                    </div>   
+                 </form>
+       </div>
+    </div>
+</div>
